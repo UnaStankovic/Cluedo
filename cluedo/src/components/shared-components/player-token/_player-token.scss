@@ -1,0 +1,25 @@
+.player-token {
+    border: 1px solid gray;
+    box-shadow: 3px solid gray;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    &.miss-scarlet {
+        background-color: crimson;
+    }
+    &.colonel-mustard {
+        background-color: rgb(227, 192, 95);
+    }
+    &.professor-plum {
+        background-color: plum;
+    }
+    &.mister-green {
+        background-color: greenyellow;
+    }
+    &.mrs-white {
+        background-color: white;
+    }
+    &.mrs-peacock {
+        background-color: blue;
+    }
+}

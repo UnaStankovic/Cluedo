@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.clickable:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.xs {
+  font-size: 11px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.pre-regular {
+  font-size: 14px;
+}
+
+.regular {
+  font-size: 16px;
+}
+
+.medium {
+  font-size: 18px;
+}
+
+.big {
+  font-size: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.white {
+  color: white;
+}
+
+.black {
+  color: black;
+}
+
+.flex {
+  display: flex;
+}
+.flex.row {
+  flex-direction: row;
+}
+.flex.column {
+  flex-direction: column;
+}
+.flex.a-start {
+  align-items: flex-start;
+}
+.flex.a-center {
+  align-items: center;
+}
+.flex.a-end {
+  align-items: flex-end;
+}
+.flex.a-sb {
+  align-items: space-between;
+}
+.flex.a-evenly {
+  align-items: space-evenly;
+}
+.flex.jc-start {
+  justify-content: flex-start;
+}
+.flex.jc-center {
+  justify-content: center;
+}
+.flex.jc-end {
+  justify-content: flex-end;
+}
+.flex.jc-sb {
+  justify-content: space-between;
+}
+.flex.jc-evenly {
+  justify-content: space-evenly;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.game-table {
+  background-image: url("./assets/img/tile.jpeg");
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Lobster;
+}
+.game-table .game-room {
+  width: 30%;
+  background-color: aqua;
+  height: 200px;
+  margin: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.game-table .game-room p {
+  font-family: Lobster;
+  text-transform: capitalize;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+.game-table .game-room.billiard-room {
+  background-color: green;
+}
+.game-table .game-room.study {
+  background-color: brown;
+}
+.game-table .game-room.hall {
+  background-color: white;
+}
+.game-table .game-room.lounge {
+  background-color: pink;
+}
+.game-table .game-room.dinning-room {
+  background-color: yellow;
+}
+.game-table .game-room.ballroom {
+  background-color: purple;
+}
+.game-table .game-room.conservatory {
+  background-color: powderblue;
+}
+.game-table .game-room.library {
+  background-color: bisque;
+}
+.game-table .game-room.kitchen {
+  background-color: goldenrod;
+}
+
+.main-page {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.main-page .enter-game-button {
+  border: 1px solid #8AA1B1;
+  background-color: rgba(138, 161, 177, 0.6);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.main-page .enter-game-button:hover {
+  opacity: 0.8;
+}
+
+.player-token {
+  border: 1px solid gray;
+  box-shadow: 3px solid gray;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.player-token.miss-scarlet {
+  background-color: crimson;
+}
+.player-token.colonel-mustard {
+  background-color: rgb(227, 192, 95);
+}
+.player-token.professor-plum {
+  background-color: plum;
+}
+.player-token.mister-green {
+  background-color: greenyellow;
+}
+.player-token.mrs-white {
+  background-color: white;
+}
+.player-token.mrs-peacock {
+  background-color: blue;
+}/*# sourceMappingURL=App.css.map */
