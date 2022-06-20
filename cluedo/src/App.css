@@ -116,7 +116,8 @@ a {
 }
 
 .game-table {
-  background-image: url("./assets/img/tile.jpeg");
+  background-image: url("./assets/img/bck.jpg");
+  background-size: contain;
   background-repeat: repeat;
   height: 100vh;
   width: 100vw;
@@ -175,9 +176,16 @@ a {
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.main-page p {
+  font-family: Lobster;
+  text-transform: capitalize;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
 }
 .main-page .enter-game-button {
   border: 1px solid #8AA1B1;
@@ -188,6 +196,43 @@ a {
   cursor: pointer;
 }
 .main-page .enter-game-button:hover {
+  opacity: 0.8;
+}
+
+.reception-desk {
+  background-image: url("./assets/img/rooms/reception.jpeg");
+  background-size: contain;
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100vw;
+}
+.reception-desk .dark-overlay {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: Lobster;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.reception-desk .dark-overlay input {
+  padding: 10px;
+  border: 2px solid salmon;
+  border-radius: 10px;
+  width: 300px;
+  margin-right: 20px;
+}
+.reception-desk .dark-overlay .enter-game-button {
+  border: 1px solid #8AA1B1;
+  background-color: rgba(138, 161, 177, 0.6);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.reception-desk .dark-overlay .enter-game-button:hover {
   opacity: 0.8;
 }
 

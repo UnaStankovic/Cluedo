@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { MainPage } from './pages/main-page/main-page';
 import { GameTable } from './pages/game-table/game-table';
+import { ReceptionDesk } from './pages/reception-desk/reception-desk';
 
 export const App = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ export const App = () => {
                     <Routes>
                       <Route exact path="/"  element={<MainPage />}/>
                       <Route exact path="/game"  element={<GameTable />}/>
+                      <Route exact path="/reception"  element={<ReceptionDesk />}/>
                         {/* <Route path="/login" index element={<Login />}/> */}
                        
                         {/* <Route path="/game" element={<UserPanel/>}>

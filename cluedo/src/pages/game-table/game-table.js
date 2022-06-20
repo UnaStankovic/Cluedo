@@ -8,15 +8,15 @@ export const GameTable = () => {
     return(
         <div className='game-table'>
             <div className='game-room billiard-room'>
-                <p className='uppercase'>Billiard room</p>
+                <p className='uppercase'>Elevator</p>
                 <PlayerToken player='miss-scarlet'/>
             </div>
             <div className='game-room study'>
-                <p className='uppercase'>Study</p>
+                <p className='uppercase'>Bedroom</p>
                 <PlayerToken player='mister-green'/>
             </div>
             <div className='game-room hall'>
-                <p className='uppercase'>Hall</p>
+                <p className='uppercase'>Pool</p>
             </div>
             <div className='game-room lounge'>
                 <p className='uppercase'>Lounge</p>
@@ -29,11 +29,11 @@ export const GameTable = () => {
                 <p className='uppercase'>Ballroom </p>
             </div>
             <div className='game-room conservatory'>
-                <p className='uppercase'>Conservatory</p>
+                <p className='uppercase'>Beach</p>
                 <PlayerToken player='mrs-white'/>
             </div>
             <div className='game-room library'>
-                <p className='uppercase'>Library</p>
+                <p className='uppercase'>Shop</p>
                 <PlayerToken player='professor-plum'/>
             </div>
             <div className='game-room kitchen'>
