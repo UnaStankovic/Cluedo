@@ -4,7 +4,7 @@ include "../../../../node_modules/circomlib/circuits/comparators.circom";
 include "../../../../node_modules/circomlib/circuits/poseidon.circom";
 
 template Cluedo() {
-
+    signal solnHashOut;
     // Public inputs
     signal input guessMurderer; //murderer
     signal input guessRoom;  //room
@@ -19,10 +19,12 @@ template Cluedo() {
 
     signal input privSalt;
     
-
+    
     // Output
-    signal output solnHashOut;
-
+    
+    signal output matchedMurderer;
+    signal output matchedRoom;
+    signal output matchedWeapon;
 
     //constraints
 
@@ -74,9 +76,12 @@ template Cluedo() {
         equalGuess[j] = IsEqual();
         equalGuess[j].in[0] <== guess[j];
         equalGuess[j].in[1] <== soln[j];
-        equalGuess[j].out === 1;
+        // equalGuess[j].out === 1;
+        
     }
-   
+    matchedMurderer <== equalGuess[0].out;
+    matchedRoom <== equalGuess[0].out;
+    matchedWeapon <== equalGuess[0].out;
  
 
     // Verify that the hash of the private solution matches pubSolnHash

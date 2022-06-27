@@ -1,0 +1,71 @@
+.guess-modal-wrap {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .guess-modal { 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: 500px;
+        width: 500px;
+        background-color: white!important;
+        border-radius: 10px;
+        border: 2px solid blue;
+        
+        .guess-modal-header {
+            width: 100%;
+            // background-color: orange;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            // padding: 10px;
+            color: black;
+            font-family: Lobster;
+            border-bottom: 1px solid black;
+            padding: 10px;
+        }
+        .guess-modal-content{
+            height: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            .option-title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 200px;
+            }
+            select {
+                margin: 20px 10px;
+                border: none;
+                border-bottom: 1px solid lightcoral;
+                outline: none;
+            }
+            .wrong-guesses{
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                span{
+                    margin: 10px;
+                }
+                .wrong-guess {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    
+                }
+            }
+        }
+    }
+}

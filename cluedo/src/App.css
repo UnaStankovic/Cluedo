@@ -116,7 +116,7 @@ a {
 }
 
 .game-table {
-  background-image: url("./assets/img/bck.jpg");
+  background-image: url("./assets/img/tile.jpeg");
   background-size: contain;
   background-repeat: repeat;
   height: 100vh;
@@ -127,6 +127,47 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   font-family: Lobster;
+  position: relative;
+}
+.game-table .guess-move {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background-color: burlywood;
+  border: 1px solid brown;
+  height: 100px;
+  width: 100px;
+  font-family: Lobster;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px #ebbebe;
+}
+.game-table .move-picker-modal {
+  height: 200px !important;
+}
+.game-table .move-picker-modal .guess-modal-content {
+  height: 100%;
+  width: 100%;
+}
+.game-table .move-picker-modal .enter-game-button {
+  margin-right: 10px;
+}
+.game-table .move-picker-modal .move-picker-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game-table .move-picker-modal .move-picker-wrap p {
+  letter-spacing: 2px;
+}
+.game-table .move-picker-modal .move-picker-wrap div {
+  font-family: Lobster;
+  margin-top: 20px;
 }
 .game-table .game-room {
   width: 30%;
@@ -143,14 +184,23 @@ a {
   color: white;
   text-shadow: 2px 2px 4px #000;
 }
-.game-table .game-room.billiard-room {
+.game-table .game-room.elevator {
   background-color: green;
+  background-image: url("./assets/img/rooms/elevator.jpg");
+  background-size: contain;
+  background-repeat: repeat;
 }
-.game-table .game-room.study {
+.game-table .game-room.pool {
   background-color: brown;
+  background-image: url("./assets/img/rooms/pool.jpg");
+  background-size: contain;
+  background-repeat: repeat;
 }
-.game-table .game-room.hall {
+.game-table .game-room.bedroom {
   background-color: white;
+  background-image: url("./assets/img/rooms/bedroom.jpg");
+  background-size: contain;
+  background-repeat: repeat;
 }
 .game-table .game-room.lounge {
   background-color: pink;
@@ -161,10 +211,13 @@ a {
 .game-table .game-room.ballroom {
   background-color: purple;
 }
-.game-table .game-room.conservatory {
+.game-table .game-room.beach {
   background-color: powderblue;
+  background-image: url("./assets/img/bck.jpg");
+  background-size: contain;
+  background-repeat: repeat;
 }
-.game-table .game-room.library {
+.game-table .game-room.shop {
   background-color: bisque;
 }
 .game-table .game-room.kitchen {
@@ -187,17 +240,6 @@ a {
   color: white;
   text-shadow: 2px 2px 4px #000;
 }
-.main-page .enter-game-button {
-  border: 1px solid #8AA1B1;
-  background-color: rgba(138, 161, 177, 0.6);
-  color: white;
-  border-radius: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
-}
-.main-page .enter-game-button:hover {
-  opacity: 0.8;
-}
 
 .reception-desk {
   background-image: url("./assets/img/rooms/reception.jpeg");
@@ -210,7 +252,7 @@ a {
   height: 100vh;
   width: 100vw;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -235,6 +277,21 @@ a {
 .reception-desk .dark-overlay .enter-game-button:hover {
   opacity: 0.8;
 }
+.reception-desk .dark-overlay div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  padding-top: 20px;
+}
+.reception-desk .dark-overlay div .white {
+  color: white;
+}
+.reception-desk .dark-overlay div span {
+  margin: 0 20px;
+}
 
 .player-token {
   border: 1px solid gray;
@@ -242,6 +299,13 @@ a {
   border-radius: 50%;
   height: 50px;
   width: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.player-token.active {
+  border: 1px solid red;
 }
 .player-token.miss-scarlet {
   background-color: crimson;
@@ -260,4 +324,84 @@ a {
 }
 .player-token.mrs-peacock {
   background-color: blue;
+}
+
+.guess-modal-wrap {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.guess-modal-wrap .guess-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 500px;
+  width: 500px;
+  background-color: white !important;
+  border-radius: 10px;
+  border: 2px solid blue;
+}
+.guess-modal-wrap .guess-modal .guess-modal-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  font-family: Lobster;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.guess-modal-wrap .guess-modal .guess-modal-content {
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.guess-modal-wrap .guess-modal .guess-modal-content .option-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+.guess-modal-wrap .guess-modal .guess-modal-content select {
+  margin: 20px 10px;
+  border: none;
+  border-bottom: 1px solid lightcoral;
+  outline: none;
+}
+.guess-modal-wrap .guess-modal .guess-modal-content .wrong-guesses {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.guess-modal-wrap .guess-modal .guess-modal-content .wrong-guesses span {
+  margin: 10px;
+}
+.guess-modal-wrap .guess-modal .guess-modal-content .wrong-guesses .wrong-guess {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.enter-game-button {
+  border: 1px solid #8AA1B1;
+  background-color: rgba(138, 161, 177, 0.6);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.enter-game-button:hover {
+  opacity: 0.8;
 }/*# sourceMappingURL=App.css.map */

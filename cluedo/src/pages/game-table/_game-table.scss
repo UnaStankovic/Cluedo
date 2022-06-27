@@ -1,5 +1,5 @@
 .game-table{
-    background-image: url('./assets/img/bck.jpg');
+    background-image: url('./assets/img/tile.jpeg');
     background-size: contain;
     background-repeat: repeat;
     height: 100vh;
@@ -10,6 +10,54 @@
     flex-wrap: wrap;
     justify-content: space-between;
     font-family: Lobster;
+    position: relative;
+    .guess-move {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border-radius: 50%;
+        background-color: burlywood;
+        border: 1px solid brown;
+        height: 100px;
+        width: 100px;
+        font-family: Lobster;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 2px #ebbebe;
+    }
+    .move-picker-modal {
+        height: 200px!important;
+        .guess-modal-content {
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            // background-color: red;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .enter-game-button {
+            margin-right: 10px;
+        }
+        .move-picker-wrap {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+               
+                letter-spacing: 2px;
+            }
+            div {
+                font-family: Lobster;
+                margin-top: 20px;
+            }
+        }
+    }
+    
     .game-room {
         width: 30%;
         background-color: aqua;
@@ -25,14 +73,23 @@
             text-shadow: 2px 2px 4px #000;
         }
          
-        &.billiard-room {
+        &.elevator {
             background-color: green;
+            background-image: url('./assets/img/rooms/elevator.jpg');
+            background-size: contain;
+            background-repeat: repeat;
         }
-        &.study {
+        &.pool {
             background-color: brown;
+            background-image: url('./assets/img/rooms/pool.jpg');
+            background-size: contain;
+            background-repeat: repeat;
         }
-        &.hall {
+        &.bedroom {
             background-color: white;
+            background-image: url('./assets/img/rooms/bedroom.jpg');
+            background-size: contain;
+            background-repeat: repeat;
         }
         &.lounge {
             background-color: pink;
@@ -43,10 +100,13 @@
         &.ballroom {
             background-color: purple;
         }
-        &.conservatory {
+        &.beach {
             background-color: powderblue;
+            background-image: url('./assets/img/bck.jpg');
+            background-size: contain;
+            background-repeat: repeat;
         }
-        &.library {
+        &.shop {
             background-color: bisque;
         }
         &.kitchen {
