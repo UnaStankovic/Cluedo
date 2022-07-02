@@ -80,8 +80,8 @@ template Cluedo() {
         
     }
     matchedMurderer <== equalGuess[0].out;
-    matchedRoom <== equalGuess[0].out;
-    matchedWeapon <== equalGuess[0].out;
+    matchedRoom <== equalGuess[1].out;
+    matchedWeapon <== equalGuess[2].out;
  
 
     // Verify that the hash of the private solution matches pubSolnHash

@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/unastankovic/Desktop/ZKU/frontend/cluedo/src/circuit-contracts/contracts/verifier.sol": {
-      "lastModificationDate": 1656276986631,
-      "contentHash": "c6f50baaa7b6a972fbb0f12c732080b2",
+      "lastModificationDate": 1656754665901,
+      "contentHash": "8807a11e66875ebf36a55562b7a113d3",
       "sourceName": "circuit-contracts/contracts/verifier.sol",
       "solcConfig": {
         "version": "0.8.13",
